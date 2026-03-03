@@ -182,7 +182,7 @@ mySprite = sprites.create(img`
     . . . . . 1 1 . . 1 1 . . . . . 
     . . . . . 1 1 . . 1 1 . . . . f 
     `, SpriteKind.Player)
-mySprite.setPosition(62, 86)
+mySprite.setPosition(50, 90)
 info.setScore(0)
 info.setLife(3)
 info.startCountdown(60)

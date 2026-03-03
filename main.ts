@@ -5,7 +5,12 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     info.changeScoreBy(10)
 })
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
-    info.changeScoreBy(5)
+    if (info.score() < 100) {
+        game.gameOver(false)
+        game.setGameOverMessage(false, "GAME OVER!")
+    } else {
+        info.changeScoreBy(5)
+    }
 })
 info.onScore(1000, function () {
     mySprite.sayText("Upgrade unlocked you can start pressing S on the keyboard.")

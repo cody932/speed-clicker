@@ -170,28 +170,28 @@ scene.setBackgroundImage(img`
     ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
     `)
 mySprite = sprites.create(img`
-    . . . . . . 1 1 1 1 . . . . . . 
-    . . . . . 1 f f f f 1 . . . . . 
-    . . . . 1 f f f f f f 1 . . . . 
-    . . . . 1 f f f f f f 1 . . . . 
-    . . . . 1 f f f f f f 1 . . . . 
-    . . . . . 1 f f f f 1 . . 1 1 1 
-    . . . . . . 1 f f 1 . . . 1 1 1 
-    . . . . . . 1 1 1 1 1 1 1 1 1 1 
-    1 1 1 1 1 1 f 1 1 f 1 1 1 1 1 1 
-    1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-    1 1 1 1 1 1 f 1 1 f 1 . . . . . 
-    1 1 1 . . 1 1 f f 1 1 . . . . . 
-    1 1 1 . . 1 1 1 1 1 1 . . . . . 
-    . . . . . 1 1 . . 1 1 . . . . . 
-    . . . . . 1 1 . . 1 1 . . . . . 
-    . . . . . 1 1 . . 1 1 . . . . f 
+    . . . . . . . . . . . . . . . . 
+    . . . . . 1 1 1 1 . . . . . . . 
+    . . . . 1 f f f f 1 . . . . . . 
+    . . . 1 f f f f f f 1 . . . . . 
+    1 1 . 1 f f f f f f 1 . . . . . 
+    1 1 . 1 f f f f f f 1 . . 1 1 . 
+    . 1 1 . 1 f f f f 1 . . . 1 1 . 
+    . 1 1 . . 1 1 1 1 . . . 1 1 . . 
+    . 1 1 1 1 f 1 1 f 1 1 1 1 1 . . 
+    . . 1 1 1 1 1 1 1 1 1 1 1 . . . 
+    . . . . f 1 1 1 f . . . . . . . 
+    . . . . 1 f f f 1 . . . . . . . 
+    . . . . 1 1 1 1 1 . . . . . . . 
+    . . . . 1 1 1 1 1 1 . . . . . . 
+    . . . 1 1 1 . . 1 1 1 . . . . . 
+    . . . 1 1 1 . . 1 1 1 . . . . f 
     `, SpriteKind.Player)
-mySprite.setPosition(62, 86)
+mySprite.setPosition(34, 94)
+mySprite.sayText("Save the world get to 100000 score start by pressing Z on the keyboard to gain score I will tell you when to press other buttons don't run out of lives first get to 100 score.", 5000, true)
+pause(20000)
+info.startCountdown(60)
 info.setScore(0)
 info.setLife(3)
 info.startCountdown(60)
 info.stopCountdown()
-mySprite.sayText("Save the world get to 100000 score start by pressing Z on the keyboard to gain score I will tell you when to press other buttons don't run out of lives first get to 100 score. By the way DO NOT PRESS ANY OF  THE OTHER BUTTONS BEFORE I SAY SO. The timer should start soon....", 10000, true)
-pause(20000)
-info.startCountdown(60)

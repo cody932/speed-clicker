@@ -9,7 +9,136 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     }
 })
 info.onScore(25000, function () {
-    mySprite.sayText("Upgrade unlocked you can start pressing D on the keyboard.")
+    mySprite.sayText(" Oh no I got caught you have to get 100000 score soon also you can start pressing D on the keyboard. ", 5000, true)
+    mySprite.x += 35
+    mySprite.y += 5
+    mySprite7 = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        7 7 7 . . . . . . . . . . . . . 
+        7 7 7 7 7 . . . . . . . . . . . 
+        7 7 7 7 7 7 7 . . . . . . 7 7 7 
+        . . . 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        . . . . . . 7 7 7 7 7 7 7 7 7 7 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.Projectile)
+    mySprite7.setPosition(91, 95)
+    animation.runImageAnimation(
+    mySprite7,
+    [img`
+        . . . . . . . . . . . . . . 7 7 
+        . . . . . . . . . . . . 7 7 7 7 
+        . . . . . . . . . . . 7 7 7 7 7 
+        . . . . . . . . . . 7 7 7 7 7 . 
+        . . . . . . . . . 7 7 7 7 7 . . 
+        . . . . . . . . 7 7 7 7 7 . . . 
+        . . . . . . . 7 7 7 7 7 . . . . 
+        . . . . . 7 7 7 7 7 7 . . . . . 
+        . . . 7 7 7 7 7 7 . . . . . . . 
+        . . 7 7 7 7 7 . . . . . . . . . 
+        . . 7 7 7 7 . . . . . . . . . . 
+        . 7 7 7 7 . . . . . . . . . . . 
+        . 7 7 7 7 . . . . . . . . . . . 
+        7 7 7 7 . . . . . . . . . . . . 
+        7 7 7 . . . . . . . . . . . . . 
+        7 7 . . . . . . . . . . . . . . 
+        `,img`
+        . . . . . . . . . . . . . . 7 7 
+        . . . . . . . . . . . . . . 7 7 
+        . . . . . . . . . . . . . 7 7 7 
+        . . . . . . . . . . . 7 7 7 7 . 
+        . . . . . . . . . . 7 7 7 7 7 . 
+        . . . . . . . . . 7 7 7 7 7 . . 
+        . . . . . . . . . 7 7 7 7 . . . 
+        . . . . . . . . 7 7 7 7 . . . . 
+        . . . . . . . 7 7 7 7 . . . . . 
+        . . . . . . 7 7 7 7 7 . . . . . 
+        . . . . . . 7 7 7 7 . . . . . . 
+        . . . . . 7 7 7 7 . . . . . . . 
+        . . . . . 7 7 7 7 . . . . . . . 
+        . . . 7 7 7 7 7 . . . . . . . . 
+        . . 7 7 7 7 7 . . . . . . . . . 
+        . 7 7 7 7 . . . . . . . . . . . 
+        `,img`
+        . . . . . . . . . . . . . . 7 7 
+        . . . . . . . . . . . . . 7 7 7 
+        . . . . . . . . . . . . . 7 7 7 
+        . . . . . . . . . . . . 7 7 7 . 
+        . . . . . . . . . . . . 7 7 7 . 
+        . . . . . . . . . . . 7 7 7 . . 
+        . . . . . . . . . . 7 7 7 . . . 
+        . . . . . . . . . 7 7 7 7 . . . 
+        . . . . . . . . . 7 7 7 . . . . 
+        . . . . . . . . 7 7 7 . . . . . 
+        . . . . . 7 7 7 7 7 7 . . . . . 
+        . . 7 7 7 7 7 7 7 7 . . . . . . 
+        . . 7 7 7 7 7 7 . . . . . . . . 
+        . 7 7 7 7 7 . . . . . . . . . . 
+        7 7 7 7 . . . . . . . . . . . . 
+        7 7 7 . . . . . . . . . . . . . 
+        `,img`
+        . . . . . . . . . . . . . . 7 7 
+        . . . . . . . . . . . . . 7 7 7 
+        . . . . . . . . . . . . . 7 7 7 
+        . . . . . . . . . . . . 7 7 7 . 
+        . . . . . . . . . . . . 7 7 . . 
+        . . . . . . . . . . . 7 7 7 . . 
+        . . . . . . . . . . 7 7 7 . . . 
+        . . . . . . . . . 7 7 7 7 . . . 
+        . . . . . . . . 7 7 7 7 . . . . 
+        . . . . . . . 7 7 7 7 . . . . . 
+        . . . . . . 7 7 7 7 7 . . . . . 
+        . . . . . . 7 7 7 7 . . . . . . 
+        . . . . 7 7 7 7 7 . . . . . . . 
+        . . . 7 7 7 7 7 . . . . . . . . 
+        . 7 7 7 7 7 7 . . . . . . . . . 
+        7 7 7 7 7 . . . . . . . . . . . 
+        `,img`
+        . . . . . . . . . . . . . . 7 7 
+        . . . . . . . . . . . . . 7 7 7 
+        . . . . . . . . . . . . . 7 7 7 
+        . . . . . . . . . . . . 7 7 7 . 
+        . . . . . . . . . . . . 7 7 7 . 
+        . . . . . . . . . . . 7 7 7 . . 
+        . . . . . . . . . . 7 7 7 . . . 
+        . . . . . . . . . 7 7 7 7 . . . 
+        . . . . . . . . . 7 7 7 . . . . 
+        . . . . . . . . 7 7 7 . . . . . 
+        . . . . . 7 7 7 7 7 7 . . . . . 
+        . . 7 7 7 7 7 7 7 7 . . . . . . 
+        . . 7 7 7 7 7 7 . . . . . . . . 
+        . 7 7 7 7 7 . . . . . . . . . . 
+        7 7 7 7 . . . . . . . . . . . . 
+        7 7 7 . . . . . . . . . . . . . 
+        `,img`
+        . . . . . . . . . . . . . . 7 7 
+        . . . . . . . . . . . . . . 7 7 
+        . . . . . . . . . . . . . 7 7 7 
+        . . . . . . . . . . . 7 7 7 7 . 
+        . . . . . . . . . . 7 7 7 7 7 . 
+        . . . . . . . . . 7 7 7 7 7 . . 
+        . . . . . . . . . 7 7 7 7 . . . 
+        . . . . . . . . 7 7 7 7 . . . . 
+        . . . . . . . 7 7 7 7 . . . . . 
+        . . . . . . 7 7 7 7 7 . . . . . 
+        . . . . . . 7 7 7 7 . . . . . . 
+        . . . . . 7 7 7 7 . . . . . . . 
+        . . . . . 7 7 7 7 . . . . . . . 
+        . . . 7 7 7 7 7 . . . . . . . . 
+        . . 7 7 7 7 7 . . . . . . . . . 
+        . 7 7 7 7 . . . . . . . . . . . 
+        `],
+    500,
+    true
+    )
 })
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     if (info.score() < 100) {
@@ -24,6 +153,65 @@ info.onScore(1000, function () {
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     info.changeScoreBy(1)
 })
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Player, function (sprite, otherSprite) {
+    animation.runImageAnimation(
+    mySprite,
+    [img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . 1 1 1 . . . . . . . 
+        . . . . . 1 f f f 1 . . . . . . 
+        . . . . 1 f f f f f 1 . . . . . 
+        . . . . 1 f f f f f 1 . . . . 7 
+        . . . . 1 f f f f f 1 . . . 7 7 
+        . . . . . 1 f f f 1 . . . 7 7 7 
+        . . . . . . 1 1 1 . . . 7 7 7 7 
+        . . . 1 1 1 7 7 7 7 7 7 7 7 . . 
+        . . . 7 7 7 7 7 7 7 7 7 7 . . . 
+        . . 7 7 7 7 7 1 1 1 1 1 . . . . 
+        . . 7 7 7 7 7 7 7 7 7 1 . . . . 
+        . . . 1 7 7 7 7 7 7 7 7 7 . . . 
+        . . . . 1 1 1 . 1 1 7 7 7 7 . . 
+        . . . . 1 1 . . . 1 1 . 7 7 . . 
+        . . . . . . . . . 1 1 . . . . . 
+        `,img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . 1 1 1 . . . . . . . 
+        . . . . . 1 f f f 1 . . . . . . 
+        . . . . 1 f f f f f 1 . . . . . 
+        . . . . 1 f f f f f 1 . . . . 7 
+        . . . . 1 f f f f f 1 . . . 7 7 
+        . . . . . 1 f f f 1 . . . 7 7 7 
+        . . . . . . 1 1 1 . . . 7 7 7 7 
+        . . . 1 1 1 7 7 7 7 7 7 7 7 . . 
+        . . . 7 7 7 7 7 7 7 7 7 7 . . . 
+        . . 7 7 7 7 7 1 1 1 1 1 . . . . 
+        . . 7 7 7 7 7 7 7 7 7 1 . . . . 
+        . . . 1 7 7 7 7 7 7 7 7 . . . . 
+        . . . . 1 1 1 . 1 1 7 7 7 . . . 
+        . . . . 1 1 . . . 1 1 7 7 7 . . 
+        . . . . . . . . . 1 1 . 7 7 . . 
+        `,img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . 1 1 1 . . . . . . . 
+        . . . . . 1 f f f 1 . . . . . . 
+        . . . . 1 f f f f f 1 . . . . . 
+        . . . . 1 f f f f f 1 . . . 7 7 
+        . . . . 1 f f f f f 1 . . 7 7 7 
+        . . . . . 1 f f f 1 . . 7 7 7 7 
+        . . . . . . 1 1 1 . . 7 7 7 . . 
+        . . . 1 1 1 7 7 7 7 7 7 7 . . . 
+        . . . 7 7 7 7 7 7 7 7 7 . . . . 
+        . . 7 7 7 7 7 1 1 1 1 1 . . . . 
+        . . 7 7 7 7 7 7 7 7 7 1 . . . . 
+        . . . 1 7 7 7 7 7 7 7 7 . . . . 
+        . . . . 1 1 1 . 1 1 7 7 7 . . . 
+        . . . . 1 1 . . . 1 1 7 7 7 . . 
+        . . . . . . . . . 1 1 . 7 7 . . 
+        `],
+    200,
+    true
+    )
+})
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     if (info.score() < 5000) {
         game.gameOver(false)
@@ -37,7 +225,7 @@ info.onCountdownEnd(function () {
 })
 info.onScore(100, function () {
     mySprite.sayText("upgrade unlocked start pressing X on the key board. I'm trying to get to earth but the aliens are trying to catch me with there electric rope.", 5000, true)
-    mySprite.y += -10
+    mySprite.y += -4
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     if (info.score() < 25000) {
@@ -57,7 +245,7 @@ info.onLifeZero(function () {
     game.gameOver(false)
 })
 info.onScore(500, function () {
-    mySprite.sayText("Upgrade unlocked you can start pressing W on the keyboard. I found found a rocket now I'm heading to earth now.", 10000, true)
+    mySprite.sayText("Upgrade unlocked you can start pressing W on the keyboard. I found found a rocket now I'm heading to earth now.", 5000, true)
     animation.runImageAnimation(
     mySprite,
     [img`
@@ -289,6 +477,7 @@ info.onScore(500, function () {
 info.onScore(5000, function () {
     mySprite.sayText("Upgrade unlocked you can start pressing A on the keyboard.")
 })
+let mySprite7: Sprite = null
 let mySprite: Sprite = null
 scene.setBackgroundImage(img`
     ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
@@ -333,15 +522,15 @@ scene.setBackgroundImage(img`
     ffffffffffffffffffffffffffffffffffffffffff999bb99666dddd6666666668886888bbbbbbbbbbbbbbbbbbbbbbcccccccccccc8888889ffffffffffffffff76666666666666666666666667fffff
     ffffffffffffffffffffffffffffffffffffffffff99bbbb966696666666666888886888bbbbbbbbbbbbbbbbbbbbbbcbccccccccccc888886fffffffffffffffff7666666666666666666666667fffff
     ffffffffffffffffffffffffffffffffffffffffff99bbdbb666969666666668888868888bbbbbbbbbbbbbbbbbbbbccbccccccccccc8888869ffffffffffffffff7766666666666666666777777fffff
-    ffffffffffffffffffffffffffffffffffffffffff99dbbbbb6696966666666668886868888bbbbeb888bbbbbbbbbcccccccccccccc8888869fffffffffffff7777777777777777f7777777777ffffff
-    ffffffffffffffffffffffffffffffffffffffffff99bbbbbbe6969666666666888888888888888888888bbbbbbbbccccccccccccc88888869ffffffffff77777777777fff7777ff77777777777fffff
-    ffffffffffffffffffffffffffffffffffffffffff9bbbbbccbc66966666666688888688888888888d888ebbbbbbbcccccccccccbb88888869ffffffffff7777777777777fff7ff7777777777777ffff
-    ffffffffffffffffffffffffffffffffffffffffff9bbbbbbbbcc69996666688668886888888dd88dbbd88bbbbbbbccccccccccceb88888869ffffffffff777777777777777fff77777777777777ffff
-    ffffffffffffffffffffffffffffffffffffffffff9bbbbbbbbccc999966668868888888888ddddbbbbd88cbbbbbbbbccccccccc8888888869ffffffffff777777777f77777777777f77777777777fff
-    ffffffffffffffffffffffffffffffffffffffffff9ebbbbcccccccc9966666688888888888888ddbbbb888bbbbbbbbccccccccc8888888869ffffffffff77777777777777fff7777777777777777fff
-    fffffffffffffffffffff3ffffffffffffffffffff9bbbbbccccccccc666666888866888888888dddddbdd88bbbbbbccccccccc88888888bb9ffffffffff777777777777fff7ff777777777777777fff
-    ffffffffffffffffffffffffffffffffffffffffffbbbbbbcccccccccc6666688888888888888888d8888888bbbbbbccccccccc88888888bb9ffffffffff777777777777f7777ff77777777777777fff
-    ffffffffffffffffffffffffffffffffffffffffff9dbbbbccbbccccccb666688868888888888888888888888bbbbbccccccccc888888888b9ffffffffffff777777777f777777f7777777777777ffff
+    ffffffffffffffffffffffffffffffffffffffffff99dbbbbb6696966666666668886868888bbbbeb888bbbbbbbbbcccccccccccccc8888869fffffffffffff777777777777777777777777777ffffff
+    ffffffffffffffffffffffffffffffffffffffffff99bbbbbbe6969666666666888888888888888888888bbbbbbbbccccccccccccc88888869ffffffffff7777777777777777777777777777777fffff
+    ffffffffffffffffffffffffffffffffffffffffff9bbbbbccbc66966666666688888688888888888d888ebbbbbbbcccccccccccbb88888869ffffffffff77777777777777777777777777777777ffff
+    ffffffffffffffffffffffffffffffffffffffffff9bbbbbbbbcc69996666688668886888888dd88dbbd88bbbbbbbccccccccccceb88888869ffffffffff77777777777777777777777777777777ffff
+    ffffffffffffffffffffffffffffffffffffffffff9bbbbbbbbccc999966668868888888888ddddbbbbd88cbbbbbbbbccccccccc8888888869ffffffffff777777777777777777777777777777777fff
+    ffffffffffffffffffffffffffffffffffffffffff9ebbbbcccccccc9966666688888888888888ddbbbb888bbbbbbbbccccccccc8888888869ffffffffff777777777777777777777777777777777fff
+    fffffffffffffffffffff3ffffffffffffffffffff9bbbbbccccccccc666666888866888888888dddddbdd88bbbbbbccccccccc88888888bb9ffffffffff777777777777777777777777777777777fff
+    ffffffffffffffffffffffffffffffffffffffffffbbbbbbcccccccccc6666688888888888888888d8888888bbbbbbccccccccc88888888bb9ffffffffff777777777777777777777777777777777fff
+    ffffffffffffffffffffffffffffffffffffffffff9dbbbbccbbccccccb666688868888888888888888888888bbbbbccccccccc888888888b9ffffffffffff777777777777777777777777777777ffff
     ffffffffffffffffffffffffffffffffffffffffff9dbbbbbbbbcccccbb66666688888888888888888888888bbbbccccccccccc88888888869fffffffffffffffff777777777777777777777777fffff
     ffffffffffffffffffffffffffffffffffffffffff9bbbbbbbcccccccb666666688888888888888888888888bbbbcccccccccc888888888869ffffffffffffffffffff777777777777777fffffffffff
     ffffffffffffffffffffffffffffffffffffffffff9bbbbbbbccccccbb666666688888888888888888888888bbbbcccccccccc88888888886fffffffffffffffffffffffffffffffffffffffffffffff
@@ -447,7 +636,7 @@ let mySprite2 = sprites.create(img`
     . 7 7 7 7 7 . . . . . . . . . . 
     7 7 7 7 7 . . . . . . . . . . . 
     7 7 7 7 7 . . . . . . . . . . . 
-    `, SpriteKind.Player)
+    `, SpriteKind.Projectile)
 mySprite2.setPosition(133, 57)
 let mySprite3 = sprites.create(img`
     . . . . . . . . . . . . 7 7 7 7 
@@ -466,7 +655,7 @@ let mySprite3 = sprites.create(img`
     7 7 7 7 7 7 . . . . . . . . . . 
     7 7 7 7 7 . . . . . . . . . . . 
     7 7 7 7 . . . . . . . . . . . . 
-    `, SpriteKind.Player)
+    `, SpriteKind.Projectile)
 let mySprite4 = sprites.create(img`
     . . . . . . . . . . . . . 7 7 7 
     . . . . . . . . . . . 7 7 7 7 7 
@@ -484,7 +673,7 @@ let mySprite4 = sprites.create(img`
     . 7 7 7 7 7 . . . . . . . . . . 
     7 7 7 7 7 . . . . . . . . . . . 
     7 7 7 7 . . . . . . . . . . . . 
-    `, SpriteKind.Player)
+    `, SpriteKind.Projectile)
 let mySprite5 = sprites.create(img`
     . . . . . . . . . . 7 7 7 7 7 7 
     . . . . . . . . . 7 7 7 7 7 7 7 
@@ -502,7 +691,7 @@ let mySprite5 = sprites.create(img`
     7 7 7 7 7 7 . . . . . . . . . . 
     7 7 7 7 7 . . . . . . . . . . . 
     7 7 7 7 7 . . . . . . . . . . . 
-    `, SpriteKind.Player)
+    `, SpriteKind.Projectile)
 let mySprite6 = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
@@ -520,7 +709,7 @@ let mySprite6 = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
-    `, SpriteKind.Player)
+    `, SpriteKind.Projectile)
 animation.runImageAnimation(
 mySprite2,
 [img`

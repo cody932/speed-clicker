@@ -223,6 +223,26 @@ info.onCountdownEnd(function () {
     info.changeLifeBy(-1)
     info.startCountdown(20)
 })
+controller.combos.attachCombo("u+d A+l", function () {
+    mySprite7 = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . 1 1 1 1 1 1 1 1 . . 
+        . . . . . . 1 f f f f f f 1 . . 
+        . . . . . . 1 f f f f 1 f 1 . . 
+        . . . . . . 1 f f f f f f 1 . . 
+        . . . . . . 1 1 f f f f f 1 . . 
+        . . . . . . . . 1 1 1 1 1 1 . . 
+        . . . . . . . . 1 . . . . . . . 
+        . . . . . . . . 1 . . . . . . . 
+        . . . . . . . 1 1 . . . . . . . 
+        . . . . . 1 . 1 1 1 . 1 . . . . 
+        . . . . . . 1 1 1 1 1 1 . . . . 
+        . . . . . . . 1 . . . . . . . . 
+        . . . . . . 1 1 1 1 . . . . . . 
+        . . . . . 1 . . . 1 1 1 . . . . 
+        `, SpriteKind.Player)
+})
 info.onScore(100, function () {
     mySprite.sayText("upgrade unlocked start pressing X on the key board. I'm trying to get to earth but the aliens are trying to catch me with there electric rope.", 5000, true)
     mySprite.y += -4

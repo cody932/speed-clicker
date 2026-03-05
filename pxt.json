@@ -6,7 +6,8 @@
         "darts": "*",
         "pxt-button-combos": "github:jwunderl/pxt-button-combos#v0.0.24",
         "animation": "*",
-        "browser-events": "*"
+        "browser-events": "*",
+        "pxt-status-bar": "github:jwunderl/pxt-status-bar#v0.4.2"
     },
     "files": [
         "main.blocks",
